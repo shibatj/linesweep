@@ -16,6 +16,16 @@ int main()
         event.push_back({a, 1}); // add person
         event.push_back({b, 2}); // remove person
     }
+    sort(event.begin(), event.end());
 
+    int cnt = 0, mx = 0;
+    for (auto e : event){
+        if(e.second == 1) { // add pseson
+            ++cnt;
+            mx = max(mx, cnt);
+        }else{ // remove person
+            --cnt;
+        }
+    }
     return 0;
 }
