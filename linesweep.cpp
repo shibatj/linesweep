@@ -21,10 +21,10 @@ int main()
     int cnt = 0, mx = 0;
     for (auto e : event){
         if(e.second == 1) { // add remove
-            ++cnt;
+            --cnt;
             mx = max(mx, cnt);
         }else{ // add person
-            --cnt;
+            ++cnt;
             mx = max(mx, cnt);
         }
         printf("%d\n", mx);
